@@ -343,6 +343,15 @@ async function pageAdmin() {
         await include_html("/src/html/content/contact.html", "contentArticle", true);
     }
 
+
+
+    else if (pathNameMatchPage("/admin/donation", true)) {
+        await includes();
+
+        await include_css("/src/css/donation.css");
+        await include_html("/src/html/content/donation.html", "contentArticle", true);
+    }
+
     else {
         return false;
     }
