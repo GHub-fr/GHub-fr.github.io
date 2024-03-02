@@ -350,6 +350,7 @@ async function pageAdmin() {
 
         await include_css("/src/css/donation.css");
         await include_html("/src/html/content/donation.html", "contentArticle", true);
+        await include_script("/src/js/donation.js");
     }
 
     else {
