@@ -47,4 +47,8 @@ header>div>div>.subnav-text>h2 {
     header {
         position: relative;
     }
+
+    header>*{
+        padding-bottom: 16px;
+    }
 }
