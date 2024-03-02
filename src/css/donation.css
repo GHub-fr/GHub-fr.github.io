@@ -35,6 +35,7 @@
 
 .svg{
     max-width: 75px;
+    padding-right: 25px;
 }
 
 @media screen and (max-width: 1024px) {
