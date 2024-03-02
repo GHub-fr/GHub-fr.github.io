@@ -3,11 +3,15 @@ main();
 async function main() {
     await include_script("/src/js/gather.js");
 
-    setTokenData("BTC", "€", "EUR");
-    setTokenData("ETH", "€", "EUR");
-    setTokenData("XRP", "€", "EUR");
-    setTokenData("ADA", "$", "USD");
-    setTokenData("USDT", "$", "USD");
+    var deviseType = "USD";
+    var devise = "$";
+
+    setTokenData("BTC", devise, deviseType);
+    setTokenData("ETH", devise, deviseType);
+    setTokenData("XMR", devise, deviseType);
+    setTokenData("XRP", devise, deviseType);
+    setTokenData("ADA", devise, deviseType);
+    setTokenData("USDT", devise, deviseType);
 }
 
 async function setTokenData(token, devise, deviseType) {
@@ -22,6 +26,11 @@ function setData(id, data, devise, deviseType) {
 
 async function getPrice(token, deviseType) {
     var x = await gather('https://api.blockchain.com/v3/exchange/tickers/' + token + "-" + deviseType);
-    return getValue(x, "last_trade_price");
-    return 0;
-} 
+    var price = getValue(x, "last_trade_price");
+    if(price !== undefined){
+       return getValue(x, "last_trade_price");
+    }
+    else {
+        return "...";
+    }
+}
