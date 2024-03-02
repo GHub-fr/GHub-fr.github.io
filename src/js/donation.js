@@ -4,24 +4,25 @@ async function main() {
     await include_script("/src/js/gather.js");
 
     var deviseType = "USD";
-    var devise = "$";
 
-    setTokenData("BTC", devise, deviseType);
-    setTokenData("ETH", devise, deviseType);
-    setTokenData("XMR", devise, deviseType);
-    setTokenData("XRP", devise, deviseType);
-    setTokenData("ADA", devise, deviseType);
-    setTokenData("USDT", devise, deviseType);
+    setTokenData("BTC", deviseType);
+    setTokenData("ETH", deviseType);
+    setTokenData("XMR", deviseType);
+    setTokenData("XRP", deviseType);
+    setTokenData("ADA", deviseType);
+    setTokenData("USDT", deviseType);
 }
 
-async function setTokenData(token, devise, deviseType) {
+async function setTokenData(token, deviseType) {
     var price = await getPrice(token, deviseType);
-    setData(token, price, devise);
+    var priceFormat = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: deviseType });
+
+    setData(token, priceFormat.format(price));
 }
 
-function setData(id, data, devise, deviseType) {
+function setData(id, data, deviseType) {
     var elem = document.getElementById("prix-" + id);
-    elem.textContent = data +" "+ devise;
+    elem.textContent = data;
 }
 
 async function getPrice(token, deviseType) {
