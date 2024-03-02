@@ -1,3 +1,31 @@
+.holder>*{
+    display: inline-block;
+}
+
+.card{
+    max-width: 95%;
+    width: fit-content;
+
+    border-style: solid;
+    border-color: var(--main-color);
+    border-radius: 16px;
+    border-width: 3px;
+
+    padding:10px;
+    margin: 10px;
+}
+
+.card>div>*,
+.card>div>*{
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .adresse{
-max-width: 80vw;
+    padding-top: 6px;
+}
+
+.svg{
+    max-width: 100px;
 }
