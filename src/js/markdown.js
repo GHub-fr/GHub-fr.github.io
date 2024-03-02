@@ -220,7 +220,6 @@ function setAnchor() {
 
         if (isOn2) {
             isOn2 = false;
-
         } else {
             isOn2 = true;
         }
