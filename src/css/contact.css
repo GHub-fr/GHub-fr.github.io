@@ -80,3 +80,11 @@
     background-color: var(--main-color);
     box-shadow: var(--box-shadow-all-inset-main-color);
 }
+
+.contact>#techno>div{
+    background-color: var(--main-color-transparent);
+}
+
+.contact>#techno{
+    padding-top: 16px;
+}
