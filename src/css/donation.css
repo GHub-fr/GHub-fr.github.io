@@ -10,6 +10,8 @@
 
     padding:10px;
     margin: 10px;
+
+    background-color: var(--main-color-transparent);
 }
 
 #donation>.holder>.card>div>*,
