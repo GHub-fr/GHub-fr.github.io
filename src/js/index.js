@@ -14,13 +14,13 @@ async function includes() {
 
     await include_html("/src/html/include/header.html", "body", false);
 
-    await include_html("/src/html/include/anchor.html", "body", false);
-    await setIconTheme();
-
     await include_html("/src/html/include/contentTopModule.html", "header", false)
     await include_script("/src/js/contentTopmodule.js");
 
     await include_html("/src/html/include/content.html", "body", false);
+
+    await include_html("/src/html/include/anchor.html", "content-right", true);
+    await setIconTheme();
 
     await include_html("/src/html/include/searchbar.html", "body", false);
 
@@ -97,7 +97,7 @@ async function pages() {
     await include_script("/src/js/viewcount.js");
     await devFooter();
     await include_script("/src/js/cursor.js");
-    await include_script("/src/js/date.js");
+   // await include_script("/src/js/date.js");
     await include_script("/src/js/searchbar.js");
 }
 
@@ -108,15 +108,15 @@ async function pageGithub() {
         await include_script("/src/js/gather.js");
 
         await include_css("/src/css/github-update.css");
-        await include_html("/src/html/content/github-update.html", "content", true);
+        await include_html("/src/html/content/github-update.html", "contentArticle", true);
         await include_script("/src/js/github-update.js");
 
         await include_css("/src/css/github-commits.css");
-        await include_html("/src/html/content/github-commits.html", "content", true);
+        await include_html("/src/html/content/github-commits.html", "contentArticle", true);
         await include_script("/src/js/github-commits.js");
 
         await include_css("/src/css/github-events.css");
-        await include_html("/src/html/content/github-events.html", "content", true);
+        await include_html("/src/html/content/github-events.html", "contentArticle", true);
         await include_script("/src/js/github-events.js");
     }
 
@@ -125,7 +125,7 @@ async function pageGithub() {
 
         await include_script("/src/js/gather.js");
 
-        await include_html("/src/html/content/contributeur.html", "content", true);
+        await include_html("/src/html/content/contributeur.html", "contentArticle", true);
         await include_script("/src/js/contributeur.js");
     }
 
@@ -134,7 +134,7 @@ async function pageGithub() {
 
         await include_script("/src/js/gather.js");
 
-        await include_html("/src/html/content/issues.html", "content", true);
+        await include_html("/src/html/content/issues.html", "contentArticle", true);
         await include_css("/src/css/issues.css");
         await include_script("/src/js/issues.js");
     }
@@ -373,7 +373,7 @@ async function pageGames() {
     else if (pathNameMatchPage("/games/shopTitans", true)) {
         await includes();
 
-        await include_html("/src/html/content/shopTitans.html", "content", true);
+        await include_html("/src/html/content/shopTitans.html", "contentArticle", true);
         await include_css("/src/css/shopTitans.css");
         await include_script("/src/js/gather.js");
         await include_script("/src/js/math.js");

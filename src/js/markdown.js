@@ -130,10 +130,12 @@ function setAnchorButton() {
     var content = document.querySelector("#anchor");
 
     var button = document.createElement("button");
+    button.id = "summaryAnchor"
     var image = document.createElement("img");
     
     button.onclick = function () {
         var anchorList = document.getElementById("anchorList");
+        var contentArticle = document.getElementById("contentArticle");
 
         if (anchorList.style.display === "none") {
             anchorList.style.display = "grid";
@@ -154,7 +156,8 @@ function setAnchor() {
     setAnchorButton();
     var anchorList = document.createElement("div");
     anchorList.id = "anchorList";
-    content.appendChild(anchorList);
+    var contentLeft = document.getElementById("content-left");
+    contentLeft.appendChild(anchorList);
 
     var anchorTitle = document.createElement("b");
     anchorTitle.textContent = "Sommaire"

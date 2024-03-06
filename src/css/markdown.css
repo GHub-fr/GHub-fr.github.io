@@ -30,7 +30,7 @@
 }
 
 #anchorList{
-    padding: 16px;
+    padding: 10px;
     padding-left:5px;
 
     display: grid;
@@ -42,17 +42,10 @@
 
     background: linear-gradient(var(--main-color-transparent), var(--background-color-transparent));
 
-    position: fixed;
-
-    left: 2vw;
-    top: 20vh;
-    bottom: 20vh;
-
     backdrop-filter: blur(10px);
 
     min-height: 10vh;
-    
-    width: 10vw;
+    max-height: 80vh;
     
     opacity: 1;
     scale: 1;
@@ -77,24 +70,31 @@
     padding-bottom: 12px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
     #anchorList{
-        padding-right: 50px;
+        display: none;
+        position:sticky;
+        top: 0vh;
 
-        left: 2.5vw;
-
-        top: 75vh;
-        bottom: 5vh;
-
-        width: 75vw;
+        min-height: 95vh;
     }
+
     #anchorList>a {
         padding:5px;
         pointer-events: none;
         max-width: fit-content;
     }
+
     #anchorList:hover>a,
     #anchorList:active>a{
         pointer-events: all !important;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #anchorList{
+        position: sticky;
+        top: 9vh;
+        bottom: 0vh;
     }
 }

@@ -209,4 +209,4 @@ btn3.onclick = function () {
 }
 div.appendChild(btn3);
 
-document.body.querySelector("#content").appendChild(div);
+document.body.querySelector("#contentArticle").appendChild(div);
