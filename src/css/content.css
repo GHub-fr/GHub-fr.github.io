@@ -1,16 +1,11 @@
 #content {
     min-height: 80vh;
     height: max-content;
+    position: relative;
 
     margin-bottom: 5vh;
     padding-bottom: 2.5vh;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-#contentArticle{
     border-right-style: solid;
     border-left-style: solid;
     border-bottom-style: solid;
@@ -19,14 +14,20 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 
-    padding: 16px;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
-#content-left{
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: start;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-#content-right{
-}
 
 
 #content>article {
@@ -42,13 +43,24 @@ article>div>h3 {
 
 @media screen and (max-width: 1024px) {
     #content {
-    }
-    #content-left {
+        margin-right: 5vw;
+        margin-left: 15vw;
+        max-width: 96vw;
     }
 
-    #content-right {
+    #content>#markdown {
+        max-width: 90%;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    #content {
+        margin-right: 10vw;
+        margin-left: 15vw;
+        max-width: 70vw;
+    }
+
+    #content>#markdown {
+        max-width: inherit;
+    }
 }

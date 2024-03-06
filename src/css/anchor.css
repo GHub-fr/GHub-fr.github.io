@@ -9,12 +9,13 @@
 }
 
 #anchor {
-    display: block;
+    position: fixed;
+    z-index: 1000;
+
+    display: grid;
     max-width: min-content;
 
-    height: 100%;
-
-    padding: 10px;
+    padding-top: 10px;
 }
 
 #anchor>a>button,
@@ -26,21 +27,13 @@
     background-color: var(--main-color-transparent);
 }
 
-#summaryAnchor, #scroll-up, #editAnchor{
-    position: sticky;
-    z-index: 1000;
-}
-
-#summaryAnchor{
-    top: 30vh;
+#editAnchor{
+    margin-top:25px;
 }
 
 #scroll-up {
-    top:  10vh;
-}
-
-#editAnchor{
-    top: 20vh;
+    position: fixed;
+    bottom: 5px;
 }
 
 @media screen and (max-width: 1024px) {

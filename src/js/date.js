@@ -13,7 +13,7 @@ function setDateHTML() {
     var dateTimeZone = document.createElement("p");
     dateTimeZone.id = id + "TimeZone";
 
-    var content = document.querySelector("#content-right");
+    var content = document.querySelector("#content");
     if (content != null) {
         content.appendChild(div);
 
