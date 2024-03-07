@@ -9,10 +9,11 @@
 }
 
 #anchor {
-    position: fixed;
     z-index: 1000;
 
-    display: grid;
+    display: flex;
+    flex-direction: column;
+
     max-width: min-content;
 
     padding-top: 10px;
