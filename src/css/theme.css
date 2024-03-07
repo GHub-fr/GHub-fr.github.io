@@ -64,6 +64,6 @@ body {
 }
 
 ::selection {
-    background-color: transparent;
-    color: red;
+    background-color: var(--main-color);
+    color: var(--second-hover);
 }
