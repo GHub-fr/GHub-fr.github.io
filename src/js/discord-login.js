@@ -20,7 +20,7 @@ fetch('https://discord.com/api/users/@me', {
         name.id = "name";
         name.className = "discord";
         name.textContent = username + " #" + discriminator;
-        document.querySelector("#content").appendChild(name);
+        document.querySelector("#contentArticle").appendChild(name);
 
         var idText = document.createElement("p");
         idText.id = "id";
