@@ -28,6 +28,10 @@
     opacity: 0.9;
 }
 
+#result-box{
+    display: none;
+}
+
 #result-box,
 #search-box>input {
     border-radius: 10px;
