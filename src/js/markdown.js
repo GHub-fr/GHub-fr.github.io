@@ -98,13 +98,14 @@ async function addMarkdown(repo, file, gist, doesSetAnchor) {
 }
 
 function anchorButton(repo, file, gist) {
-    var content = document.querySelector("#anchor");
+    var anchor = document.querySelector("#anchor");
     var divEdit = document.querySelector("#editAnchor");
     if (divEdit === null || divEdit === undefined) {
         var newDivEdit = document.createElement("div");
         newDivEdit.id = "editAnchor";
-        content.appendChild(newDivEdit);
+        anchor.appendChild(newDivEdit);
     }
+
     divEdit = document.querySelector("#editAnchor");
     var link = document.createElement("a");
     var button = document.createElement("button");
@@ -130,6 +131,7 @@ function setAnchorButton() {
     var content = document.querySelector("#anchor");
 
     var button = document.createElement("button");
+    button.id = "SummaryAnchor";
     var image = document.createElement("img");
     
     button.onclick = function () {
@@ -154,7 +156,8 @@ function setAnchor() {
     setAnchorButton();
     var anchorList = document.createElement("div");
     anchorList.id = "anchorList";
-    content.appendChild(anchorList);
+    var contentLeft = document.getElementById("content-left");
+    contentLeft.appendChild(anchorList);
 
     var anchorTitle = document.createElement("b");
     anchorTitle.textContent = "Sommaire"

@@ -16,7 +16,7 @@ async function includes() {
 
     await include_html("/src/html/include/content.html", "body", false);
     
-    await include_html("/src/html/include/anchor.html", "body", false);
+    await include_html("/src/html/include/anchor.html", "content-right", true);
     await setIconTheme();
 
     await include_html("/src/html/include/contentTopModule.html", "header", false)
@@ -373,7 +373,7 @@ async function pageGames() {
     else if (pathNameMatchPage("/games/shopTitans", true)) {
         await includes();
 
-        await include_html("/src/html/content/shopTitans.html", "content", true);
+        await include_html("/src/html/content/shopTitans.html", "contentArticle", true);
         await include_css("/src/css/shopTitans.css");
         await include_script("/src/js/gather.js");
         await include_script("/src/js/math.js");

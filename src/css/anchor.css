@@ -28,19 +28,17 @@
     background-color: var(--main-color-transparent);
 }
 
-#summaryAnchorTest{
+#SummaryAnchor{
     position: sticky;
-    top: 50vh;
+    top: 0px;
 }
 
 #editAnchor{
     position: sticky;
-    top: 50vh;
 }
 
 #scroll-up {
     position: sticky;
-    top: 50vh;
 }
 
 @media screen and (max-width: 1024px) {
