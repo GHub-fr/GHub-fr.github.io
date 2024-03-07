@@ -44,6 +44,9 @@ article>div>h3 {
         display: none;
     }
 
+    #contentArticle {
+    }
+
     #content-right {
     }
 
@@ -57,6 +60,9 @@ article>div>h3 {
 
     #content-left {
         display: grid;
+    }
+
+    #contentArticle {
     }
 
     #content-right {
