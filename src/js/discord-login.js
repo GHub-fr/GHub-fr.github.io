@@ -26,12 +26,12 @@ fetch('https://discord.com/api/users/@me', {
         idText.id = "id";
         idText.className = "discord";
         idText.textContent = id + " : " + locale + " : MFA;" + mfa_enabled + " : Premium;" + premium_type;
-        document.querySelector("#content").appendChild(idText);
+        document.querySelector("#contentArticle").appendChild(idText);
 
         var image = document.createElement("img");
         image.id = "avatar";
         image.className = "discord";
         image.src = "https://cdn.discordapp.com/avatars/" + id + "/" + avatar + ".webp?size=1024";
-        document.querySelector("#content").appendChild(image);
+        document.querySelector("#contentArticle").appendChild(image);
     })
     .catch(console.error); 
