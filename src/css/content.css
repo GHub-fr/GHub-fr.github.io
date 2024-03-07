@@ -52,6 +52,14 @@ article>div>h3 {
     #content {
     }
 
+    #content-left {
+        display: grid;
+    }
+
+    #content-right {
+        padding: 12px;
+    }
+
     #content>#markdown {
         max-width: inherit;
     }
