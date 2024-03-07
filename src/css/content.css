@@ -1,21 +1,14 @@
 #content {
-    min-height: 80vh;
-    height: max-content;
-    position: relative;
-
-    border-right-style: solid;
-    border-left-style: solid;
-    border-bottom-style: solid;
-    border-color: var(--main-color);
-    border-width: 3px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-#content {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    min-height: 80vh;
+    height: max-content;
+    position: relative;
+}
+
+#content {
 }
 
 #content-right{
