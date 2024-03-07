@@ -40,8 +40,11 @@ article>div>h3 {
     #content {
     }
 
-    #content-right {
+    #content-left {
         display: none;
+    }
+
+    #content-right {
     }
 
     #content>#markdown {
