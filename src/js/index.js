@@ -456,6 +456,11 @@ async function devFooter() {
         var devFooter = document.getElementById("devFooter");
         if (devFooter != null) {
             devFooter.style = "";
+            var offline = document.getElementById("offline-url");
+            var online = document.getElementById("online-url");
+
+            offline.href = "http://127.0.0.1:3000" + window.location.pathname;
+            online.href = "https://doc.ghub.fr" + window.location.pathname;
         }
 
         await devTest();
