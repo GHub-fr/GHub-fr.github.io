@@ -28,23 +28,27 @@
     background-color: var(--main-color-transparent);
 }
 
+#summaryAnchorTest{
+    position: sticky;
+    top: 50vh;
+}
+
 #editAnchor{
-    margin-top:25px;
+    position: sticky;
+    top: 50vh;
 }
 
 #scroll-up {
-    position: fixed;
-    bottom: 5px;
+    position: sticky;
+    top: 50vh;
 }
 
 @media screen and (max-width: 1024px) {
     #anchor {
-        right: 0vw;
     }
 }
 
 @media screen and (min-width: 1024px) {
     #anchor {
-        right: 5vw;
     }
 }
