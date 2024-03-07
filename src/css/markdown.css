@@ -60,6 +60,12 @@
     z-index: 998;
 }
 
+#anchorList>#AnchorTitle{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #anchorList:hover,
 #anchorList:active
 {

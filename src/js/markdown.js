@@ -168,6 +168,7 @@ function setAnchor() {
     anchorTitleLogo.style = "max-width: 25px; transform: translateY(25%); padding-right: 15px; padding-left: 10px;"
 
     var divAnchorTitle = document.createElement("div");
+    divAnchorTitle.id = "AnchorTitle";
 
     divAnchorTitle.appendChild(anchorTitleLogo);
     divAnchorTitle.appendChild(anchorTitle);
@@ -202,7 +203,7 @@ function setAnchor() {
         }
     };
     var textCheck = document.createElement("p");
-    textCheck.textContent = "Titre #3 +";
+    textCheck.textContent = "3+";
     textCheck.style = "padding:10px;";
     var span = document.createElement("span");
 
@@ -239,7 +240,7 @@ function setAnchor() {
         }
     };
     var textCheck2 = document.createElement("p");
-    textCheck2.textContent = "Titre #2";
+    textCheck2.textContent = "#2";
     textCheck2.style = "padding:10px;";
     var span2 = document.createElement("span");
 
