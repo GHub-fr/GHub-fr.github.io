@@ -1,6 +1,5 @@
 button {
     background-color: var(--main-color-transparent);
-    ;
     border-color: var(--text-color);
     backdrop-filter: blur(12px);
 }
@@ -96,11 +95,6 @@ code{
     padding: 4px;
 
     color: var(--link-color);
-
-    border-color: var(--text-color);
-    border-width: 2px;
-    border-radius: 6px;
-    border-style: solid;
 }
 
 input[type=checkbox] {
