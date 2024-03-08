@@ -46,7 +46,7 @@
 
     max-height: 75vh;
     min-height: 10vh;
-    max-width: 20vw;
+    min-width: 20vw;
     top: 15vh;
     bottom: 0vh;
 
