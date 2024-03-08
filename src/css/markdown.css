@@ -45,6 +45,7 @@
     position: sticky;
     max-height: 85vh;
     min-height: 10vh;
+    max-width: 20vw;
     top: 10vh;
     bottom: 0vh;
 
@@ -87,7 +88,6 @@
     #anchorList>a {
         padding: 5px;
         pointer-events: none;
-        max-width: fit-content;
     }
 
     #anchorList:hover>a,
