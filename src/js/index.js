@@ -271,6 +271,11 @@ async function pageCours() {
         await includes();
         await include_script("/src/js/markdown.js").then(async () => { await addMarkdown('GHub-fr/.github', 'note/Retraite/learning.md', false, true); });
     }
+         
+    else if (pathNameMatchPage("/cours/windows", true)) {
+        await includes();
+        await include_script("/src/js/markdown.js").then(async () => { await addMarkdown('GHub-fr/.github', 'note/Windows/learning.md', false, true); });
+    }
 
     else {
         return false;
