@@ -43,10 +43,11 @@
     background: linear-gradient(var(--main-color-transparent), var(--background-color-transparent));
 
     position: sticky;
-    max-height: 85vh;
+
+    max-height: 75vh;
     min-height: 10vh;
     max-width: 20vw;
-    top: 10vh;
+    top: 15vh;
     bottom: 0vh;
 
     backdrop-filter: blur(10px);

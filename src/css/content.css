@@ -10,10 +10,9 @@
 
 #content-right{
     position: sticky;
-    top: 10vh;
-    bottom: 0vh;
+    top: 15vh;
 
-    max-height: 90vh;
+    max-height: 75vh;
     
     overflow-y: clip;
 
