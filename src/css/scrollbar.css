@@ -20,3 +20,7 @@
 ::-webkit-scrollbar-thumb:hover {
     background: var(--second-hover);
 }
+
+::-webkit-scrollbar-corner {
+    background: rgb(0, 0, 0, 0);
+}
