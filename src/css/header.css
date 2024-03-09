@@ -43,7 +43,7 @@ header>div>div>.subnav-text>h2 {
     display: inline-block;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
     header {
         position: relative;
     }

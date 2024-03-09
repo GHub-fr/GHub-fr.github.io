@@ -1,7 +1,13 @@
+.music{
+    max-width: 100%;
+}
+
 .music>div>div>iframe {
     background-color: var(--main-color-transparent);
 
     display: block;
+    width: 70%;
+    height: 70%;
 
     margin-right: auto;
     margin-left: auto;
@@ -10,9 +16,9 @@
 }
 
 .menu>button {
-    padding: 16px;
+    padding: 12px;
     border-radius: 16px;
-    margin: 12px;
+    margin: 8px;
 }
 
 .menu>button>p.background-clip {
@@ -50,8 +56,6 @@
 
 .music>div>div {
     display: inline-block;
-    min-width: 15vw;
-    max-width: 30vw;
 
     background-color: var(--background-color-transparent);
 
@@ -68,4 +72,21 @@
 .music>div>h1 {
     text-align: center;
     padding-top: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+.music>div>div{
+    width: 90%;
+    height: 100%;
+    }
+
+    .music>div>div>iframe {
+    }
+}
+
+@media screen and (min-width: 1024px) {
+.music>div>div{
+    min-width: 25%;
+    max-width: 25%;
+    }
 }
