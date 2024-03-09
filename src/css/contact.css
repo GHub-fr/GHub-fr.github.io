@@ -7,11 +7,11 @@
 
 .contact>h1 {
     color: var(--text-color);
+    font-size: 15vw;
     font-weight: bolder;
-    font-size: 10vw;
     font-family: Arial;
 
-    max-width: 100%;
+    max-width: 900%;
 
     margin: 24px;
 
