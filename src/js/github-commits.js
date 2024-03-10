@@ -58,8 +58,7 @@ async function getCommits(amount, repoName) {
         newDiv.appendChild(link);
 
         div.appendChild(newDiv);
-
-        var title = div.querySelector("#title");
-        title.textContent = repoName;
     }
+    var title = div.querySelector("#title");
+    title.textContent = repoName;
 }
