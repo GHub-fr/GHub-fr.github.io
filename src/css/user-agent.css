@@ -143,6 +143,11 @@ html {
     bottom: 0;
 }
 
+.checkbox.invert>input,
+.checkbox.invert>span{
+background-color: green;
+}
+
 .checkbox>span {
     position: absolute;
     top: 0;
@@ -168,6 +173,10 @@ html {
 
 .checkbox>input:checked+span {
     background-color: green;
+}
+
+.checkbox.invert>input:checked+span {
+    background-color: red;
 }
 
 .checkbox>input:focus+span {

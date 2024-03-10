@@ -177,7 +177,7 @@ function setAnchor() {
     check.classList = "check";
     check.style = "padding:25px;";
     var checkbox = document.createElement("div");
-    checkbox.classList = "checkbox";
+    checkbox.classList = "checkbox invert";
     var input = document.createElement("input");
     input.type = "checkbox";
     var isOn = false;
@@ -215,7 +215,7 @@ function setAnchor() {
     check2.classList = "check";
     check2.style = "padding:25px;";
     var checkbox2 = document.createElement("div");
-    checkbox2.classList = "checkbox";
+    checkbox2.classList = "checkbox invert";
     var input2 = document.createElement("input");
     input2.type = "checkbox";
     var isOn2 = false;
