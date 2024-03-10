@@ -214,7 +214,15 @@ async function pageCours() {
 
     else if (pathNameMatchPage("/cours/markdown", true)) {
         await includes();
-        await include_script("/src/js/markdown.js").then(async () => { await addMarkdown('GHub-fr/.github', 'note/Github/Markdown/Learning.md', false, true); });
+        await include_script("/src/js/markdown.js").then(async () => { await addMarkdown('GHub-fr/.github', 'note/Github/Markdown/Learning.md', false, false); });
+
+        addHRChapter();
+
+        await addMarkdown('GHub-fr/.github', 'note/Github/Markdown/Listing.md', false, false);
+
+        addHRChapter();
+
+        await addMarkdown('github/.github', 'profile/README.md', false, true);
     }
 
     else if (pathNameMatchPage("/cours/github-readme", true)) {
