@@ -1,8 +1,8 @@
-#github_issue {}
+#github_issue {max-width: 95%;}
 
 #github_issue>.repo {
     width: 100%;
-    max-height: 50vh;
+    max-height: 75vh;
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -10,6 +10,8 @@
     border-color: var(--main-color);
     border-width: 3px;
     border-radius: 10px;
+
+    margin-bottom: 30px;
 }
 
 #github_issue>.repo>.RepoName{

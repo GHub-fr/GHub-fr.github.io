@@ -5,6 +5,7 @@
 
     min-height: 80vh;
     height: max-content;
+    min-width: max-content;
     position: relative;
 }
 
