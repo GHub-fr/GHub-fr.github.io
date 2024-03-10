@@ -1,3 +1,10 @@
+#github-commit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 .github-commits {
     max-width: fit-content;
     max-height: fit-content;
