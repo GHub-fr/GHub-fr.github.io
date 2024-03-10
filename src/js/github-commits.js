@@ -60,6 +60,6 @@ async function getCommits(amount, repoName) {
         div.appendChild(newDiv);
 
         var title = div.querySelector("#title");
-        title.textContent += repoName;
+        title.textContent = repoName;
     }
 }
