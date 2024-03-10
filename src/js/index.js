@@ -274,7 +274,7 @@ async function pageCours() {
          
     else if (pathNameMatchPage("/cours/windows", true)) {
         await includes();
-        await include_script("/src/js/markdown.js").then(async () => { await addMarkdown('GHub-fr/.github', 'note/Windows/learning.md', false, true); });
+        await include_script("/src/js/markdown.js").then(async () => { await addMarkdown('GHub-fr/.github', 'note/OS/Windows/learning.md', false, true); });
     }
 
     else {
