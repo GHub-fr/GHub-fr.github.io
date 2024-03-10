@@ -4,14 +4,13 @@ button {
     backdrop-filter: blur(12px);
 }
 
-#content {
-    margin: 0;
-    height: 90vh;
-}
-
 body {
     position: relative;
     margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 @media screen and (max-width: 1024px) {
