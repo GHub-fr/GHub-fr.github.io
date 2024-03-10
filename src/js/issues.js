@@ -22,8 +22,6 @@ async function getIssues(repo, orgs) {
         await display(issueURL, issueLabels, repo, issueTitle, userLogin, userAvatar, state, dateUpdate, body);
     }
     if (x === null || x === undefined || x.length <= 0) { } else {
-        var root = document.getElementById("github_issue");
-        root.appendChild(document.createElement("hr"));
     }
 }
 
@@ -31,15 +29,41 @@ async function getRepo(orgs) {
     var x = await gather('https://api.github.com/orgs/' + orgs + '/repos');
     for (var i in x) {
         var repo = await getValue(x[i], "name");
+
+        var root = document.getElementById("github_issue");
+
+        var div = document.createElement('div');
+        div.id = repo;
+        div.className = "repo";
+
+        var repoName = document.createElement('div');
+        repoName.className = "RepoName";
+
+        var RepoLogo = document.createElement('img');
+        RepoLogo.src = "/assets/svg/trademark/repo.svg";
+        RepoLogo.className = "svg RepoLogo";
+
+        repoName.appendChild(RepoLogo);
+        var RepoLink = document.createElement('a');
+        RepoLink.href = "https://github.com/" + orgs + "/" + repo;
+        RepoLink.textContent = orgs + " / " + repo;
+        RepoLink.className = "RepoLink";
+        repoName.appendChild(RepoLink);
+
+        div.appendChild(repoName);
+        
+        root.append(div);
+        
         await getIssues(repo, orgs);
     }
 }
 
 async function display(issueURL, issueLabels, repo, issueTitle, userLogin, userAvatar, state, dateUpdate, body) {
     var root = document.getElementById("github_issue");
+    var RepoDiv = document.getElementById(repo);
 
-    var div = document.createElement('div');
-    div.className = "div";
+    var div = document.createElement("div");
+    div.className = "issue";
 
     var img = document.createElement('img');
     img.src = userAvatar;
@@ -108,10 +132,17 @@ async function display(issueURL, issueLabels, repo, issueTitle, userLogin, userA
     div.appendChild(p3);
 
     var p2 = document.createElement('p');
-    p2.textContent = body;
+    p2.className = "textIssue";
+    if (body != null){
+    var textIssue = parseMarkdown(body);
+    p2.innerHTML = textIssue;
+    }
+    else {
+        p2.textContent = "Erreur";
+    }
     div.appendChild(p2);
 
-    root.append(div);
+    RepoDiv.appendChild(div);
 
     document.getElementById("loading").style = "display:none;";
 }

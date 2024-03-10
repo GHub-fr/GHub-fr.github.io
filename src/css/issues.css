@@ -1,18 +1,60 @@
-div.div {
+#github_issue {}
+
+#github_issue>.repo {
+    width: 100%;
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    border-style: solid;
+    border-color: var(--main-color);
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+#github_issue>.repo>.RepoName{
+    position:sticky;
+    top: 0;
+    width: 100%;
+
+    padding: 16px;
+    padding-bottom: 30px;
+
+    border-bottom-style: solid;
+    border-bottom-color: var(--main-color);
+    border-bottom-width: 3px;
+
+    background: linear-gradient(var(--background-color), var(--main-color));
+}
+
+#github_issue>.repo>.RepoName>.RepoLogo {
+    transform: translateY(40%);
+    margin-right: 10px;
+    max-width: 50px;
+}
+
+#github_issue>.repo>.issue {
     display: inline-block;
-    margin: 60px;
+    margin: 1vw;
+    padding: 10px;
     max-width: 70vw;
     max-height: 70vh;
     overflow-x: auto;
+
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 16px;
+    border-color: var(--main-color);
+    background-color: var(--main-color-transparent);
 }
 
-img.profile {
+#github_issue>.repo>.issue>img.profile {
     max-width: 100px;
     max-height: 100px;
     border-radius: 25px;
 }
 
-img.logoissue {
+#github_issue>.repo>.issue>img.logoissue {
     max-width: 50px;
     max-height: 50px;
     padding-top: 10px;
@@ -20,28 +62,32 @@ img.logoissue {
     padding-left: 15px;
 }
 
-a.issuelink {
+#github_issue>.repo>.issue>a.issuelink {
     padding-right: 16px;
     display: block;
 }
 
-a.username {
+#github_issue>.repo>.issue>a.username {
     padding-right: 16px;
     display: block;
 }
 
-p.date {
+#github_issue>.repo>.issue>p.date {
     padding-right: 16px;
     display: inline;
 }
 
-p.repo {
+#github_issue>.repo>.issue>p.repo {
     padding-right: 16px;
     display: inline;
 }
 
-p.labelissue {
+#github_issue>.repo>.issue>p.labelissue {
     display: inline;
     padding-right: 16px;
     font-size: 32px;
+}
+
+#github_issue>.repo>.issue>p.textIssue>*{
+    display: inline-block;
 }

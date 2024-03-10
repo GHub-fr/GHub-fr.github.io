@@ -136,6 +136,7 @@ async function pageGithub() {
 
         await include_html("/src/html/content/issues.html", "contentArticle", true);
         await include_css("/src/css/issues.css");
+        await include_script("/src/js/markdown.js");
         await include_script("/src/js/issues.js");
     }
 
