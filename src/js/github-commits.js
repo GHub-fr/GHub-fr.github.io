@@ -10,9 +10,6 @@
 
 async function getCommits(amount, repoName) {
     console.log("Getting Github-Commits : " + repoName);
-
-    var title = div.querySelector("#title");
-    title.textContent += repoName;
     
     var x = await gather('https://api.github.com/repos/GHub-FR/' + repoName + '/commits');
     for (let i = 0; i < amount; i++) {
@@ -61,5 +58,8 @@ async function getCommits(amount, repoName) {
         newDiv.appendChild(link);
 
         div.appendChild(newDiv);
+
+        var title = div.querySelector("#title");
+        title.textContent += repoName;
     }
 }
