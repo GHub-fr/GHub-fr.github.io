@@ -45,16 +45,28 @@ async function getRepo(orgs) {
         var RepoLogo = document.createElement('img');
         RepoLogo.src = "/assets/svg/trademark/repo.svg";
         RepoLogo.className = "svg RepoLogo";
-
         repoName.appendChild(RepoLogo);
+
         var RepoLink = document.createElement('a');
         RepoLink.href = "https://github.com/" + orgs + "/" + repo;
         RepoLink.textContent = orgs + " / " + repo;
         RepoLink.className = "RepoLink";
         repoName.appendChild(RepoLink);
 
+        var RepoIssueLogo = document.createElement('img');
+        RepoIssueLogo.src = "/assets/svg/issue.svg";
+        RepoIssueLogo.className = "svg RepoIssueLogo";
+        repoName.appendChild(RepoIssueLogo);
+
+        var RepoIssue = document.createElement('a');
+        RepoIssue.href = "https://github.com/" + orgs + "/" + repo + "/issues/new";
+        RepoIssue.textContent = "new issue";
+        RepoIssue.className = "RepoIssue";
+        repoName.appendChild(RepoIssue);
+
         div.appendChild(repoName);
         div.appendChild(divIssue);
+        
         root.append(div);
         
         await getIssues(repo, orgs);
