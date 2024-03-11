@@ -53,21 +53,19 @@ textarea {
 
     padding: 20px;
 
-    min-width: 40%;
-    min-height: 100px;
-    
-    width: max-content;
-    height: max-content;
-    
+    min-width: 95%;
     max-width: 95%;
-    max-height: 50vh;
+
+    min-height: 100px;
+    max-height: 70vh;
+    resize: block;
 
     border-color: var(--main-color);
     border-width: 2px;
 
     color: var(--text-color);
 
-    overflow: auto;
+    overflow-y: auto;
 }
 
 textarea::-webkit-scrollbar {
