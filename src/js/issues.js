@@ -36,6 +36,9 @@ async function getRepo(orgs) {
         div.id = repo;
         div.className = "repo";
 
+        var divIssue = document.createElement("div");
+        divIssue.className = "issues";
+
         var repoName = document.createElement('div');
         repoName.className = "RepoName";
 
@@ -51,7 +54,7 @@ async function getRepo(orgs) {
         repoName.appendChild(RepoLink);
 
         div.appendChild(repoName);
-        
+        div.appendChild(divIssue);
         root.append(div);
         
         await getIssues(repo, orgs);
@@ -60,7 +63,9 @@ async function getRepo(orgs) {
 
 async function display(issueURL, issueLabels, repo, issueTitle, userLogin, userAvatar, state, dateUpdate, body) {
     var root = document.getElementById("github_issue");
-    var RepoDiv = document.getElementById(repo);
+    // var RepoDiv = document.getElementById(repo);
+    var RepoHolder = document.getElementById(repo);
+    var RepoDiv = RepoHolder.querySelector(".issues");
 
     var div = document.createElement("div");
     div.className = "issue";

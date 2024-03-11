@@ -35,7 +35,7 @@
     max-width: 50px;
 }
 
-#github_issue>.repo>.issue {
+#github_issue>.repo>.issues>.issue {
     display: inline-block;
     margin: 1vw;
     padding: 10px;
@@ -50,13 +50,13 @@
     background-color: var(--main-color-transparent);
 }
 
-#github_issue>.repo>.issue>img.profile {
+#github_issue>.repo>.issues>.issue>img.profile {
     max-width: 100px;
     max-height: 100px;
     border-radius: 25px;
 }
 
-#github_issue>.repo>.issue>img.logoissue {
+#github_issue>.repo>.issues>.issue>img.logoissue {
     max-width: 50px;
     max-height: 50px;
     padding-top: 10px;
@@ -64,32 +64,32 @@
     padding-left: 15px;
 }
 
-#github_issue>.repo>.issue>a.issuelink {
+#github_issue>.repo>.issues>.issue>a.issuelink {
     padding-right: 16px;
     display: block;
 }
 
-#github_issue>.repo>.issue>a.username {
+#github_issue>.repo>.issues>.issue>a.username {
     padding-right: 16px;
     display: block;
 }
 
-#github_issue>.repo>.issue>p.date {
+#github_issue>.repo>.issues>.issue>p.date {
     padding-right: 16px;
     display: inline;
 }
 
-#github_issue>.repo>.issue>p.repo {
+#github_issue>.repo>.issues>.issue>p.repo {
     padding-right: 16px;
     display: inline;
 }
 
-#github_issue>.repo>.issue>p.labelissue {
+#github_issue>.repo>.issues>.issue>p.labelissue {
     display: inline;
     padding-right: 16px;
     font-size: 32px;
 }
 
-#github_issue>.repo>.issue>p.textIssue>*{
+#github_issue>.repo>.issues>.issue>p.textIssue>*{
     display: inline-block;
 }
