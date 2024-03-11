@@ -167,23 +167,27 @@ function setAnchor() {
     var contentLeft = document.getElementById("content-left");
     contentLeft.appendChild(anchorList);
 
-    var anchorTitle = document.createElement("b");
-    anchorTitle.textContent = "Sommaire"
+    var divAnchorTitle = document.createElement("div");
+    divAnchorTitle.id = "AnchorTitle";
+
+
 
     var anchorTitleLogo = document.createElement("img");
     anchorTitleLogo.src = "/assets/svg/book.svg";
     anchorTitleLogo.classList = "svg";
     anchorTitleLogo.style = "max-width: 25px; transform: translateY(25%); padding-right: 15px; padding-left: 10px;"
-
-    var divAnchorTitle = document.createElement("div");
-    divAnchorTitle.id = "AnchorTitle";
-
     divAnchorTitle.appendChild(anchorTitleLogo);
+
+    var anchorTitle = document.createElement("b");
+    anchorTitle.textContent = "Sommaire"
     divAnchorTitle.appendChild(anchorTitle);
+
+    var AnchorSummary = document.createElement("div");
+    AnchorSummary.id = "AnchorSummary";
 
     var check = document.createElement("div");
     check.classList = "check";
-    check.style = "padding:25px;";
+    check.style = "padding:10px;";
     var checkbox = document.createElement("div");
     checkbox.classList = "checkbox invert";
     var input = document.createElement("input");
@@ -221,7 +225,7 @@ function setAnchor() {
 
     var check2 = document.createElement("div");
     check2.classList = "check";
-    check2.style = "padding:25px;";
+    check2.style = "padding:10px;";
     var checkbox2 = document.createElement("div");
     checkbox2.classList = "checkbox invert";
     var input2 = document.createElement("input");
@@ -257,7 +261,7 @@ function setAnchor() {
     check2.appendChild(textCheck2);
     checkbox2.appendChild(input2);
     checkbox2.appendChild(span2);
-    divAnchorTitle.appendChild(check2);
+    AnchorSummary.appendChild(check2);
 
     //
 
@@ -265,9 +269,10 @@ function setAnchor() {
     check.appendChild(textCheck);
     checkbox.appendChild(input);
     checkbox.appendChild(span);
-    divAnchorTitle.appendChild(check);
+    AnchorSummary.appendChild(check);
 
     anchorList.appendChild(divAnchorTitle);
+    anchorList.appendChild(AnchorSummary);
 
 
     var childDivs = document.getElementById('markdown').querySelectorAll("h1, h2, h3, h4, h5, h6");
