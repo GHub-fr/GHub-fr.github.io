@@ -78,21 +78,29 @@ async function addMarkdown(repo, file, gist, doesSetAnchor) {
     }
     //console.log(x2)
 
-    var content = document.querySelector("#contentArticle");
-
+    var root = document.querySelector("#contentArticle");
+    
     var markdownHolder = document.getElementById("markdown");
     if(markdownHolder === null || markdownHolder === undefined){
         var newDiv = document.createElement("div");
         newDiv.id = "markdown";
-        content.appendChild(newDiv);
+        root.appendChild(newDiv);
+        markdownHolder = document.getElementById("markdown")
     }
-    markdownHolder = document.getElementById("markdown");
-    markdownHolder.innerHTML += x2;
+
+    var content = document.createElement("div");
+    content.id = repo + "/" + file;
+    content.className = "markdowned";
+    markdownHolder.appendChild(content);
+
+    content.innerHTML += x2;
 
     anchorButton(repo, file, gist);
+
     if (doesSetAnchor === true){
         setAnchor();
     }
+
     autoScroll();
     console.log("Fin markdown");
 }
@@ -334,7 +342,7 @@ function autoScroll() {
     var element = document.getElementById(hash);
     if (element !== null) {
         element.scrollIntoView();
-    } 
+    }
 }
 
 function addHRChapter() {

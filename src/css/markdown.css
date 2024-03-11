@@ -1,25 +1,25 @@
-#markdown>img {
+.markdowned>img {
     max-width: 90%;
 }
 
-#markdown>*:not(hr) {
+.markdowned>*:not(hr) {
     display: inline;
 }
 
-#markdown>a>* {
+.markdowned>a>* {
     display: inline;
 }
 
-#markdown {
+.markdowned {
 }
 
-#markdown>*>p {
+.markdowned>*>p {
     max-width: fit-content;
     display: inline-block;
     white-space: pre;
 }
 
-#markdown>h1,#markdown>h2,#markdown>h3,#markdown>h4,#markdown>h5,#markdown>h6 {
+.markdowned>h1,.markdowned>h2,.markdowned>h3,.markdowned>h4,.markdowned>h5,.markdowned>h6 {
     display: block;
 
     text-decoration: underline;
