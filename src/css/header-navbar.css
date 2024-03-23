@@ -58,7 +58,7 @@
 
 
 
-@media screen and (max-height: 750px) {
+@media screen and (max-width: 1024px) {
     .subnav-content {
         max-height: 50vh;
 

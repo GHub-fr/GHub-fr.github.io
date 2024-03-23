@@ -43,6 +43,11 @@ header>#navlinklist>div>.subnav-text>h2 {
     display: inline-block;
 }
 
+header>#navlinklist>a>h1{
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
 @media screen and (max-width: 1024px) {
     header {
         position: relative;
