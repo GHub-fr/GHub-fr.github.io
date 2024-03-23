@@ -62,7 +62,7 @@ function closeMenu() {
 
 
 function getRSS() {
-    const RSS_URL = "https://doc.ghub.fr/rss.rss";
+    const RSS_URL = location.origin + "/rss.rss";
 
     fetch(RSS_URL)
         .then(response => response.text())
