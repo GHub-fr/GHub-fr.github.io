@@ -12,19 +12,19 @@
 
 #content-right{
     position: sticky;
-    top: 15vh;
-
-    max-height: 75vh;
-    
-    overflow-y: clip;
+    overflow-y: auto;
+    overflow-x: clip;
+    min-width: fit-content;
 
     border-style: solid;
     border-width: 2px;
     border-color: var(--main-color);
     border-radius: 16px;
 
+    border-top-style: none;
+
     margin-bottom: 2.5vh;
-    padding-bottom: 1vh;
+    padding: 1vh;
 }
 
 #content-left{
@@ -61,6 +61,8 @@ article>div>h3 {
     }
 
     #content-right {
+        top: 0vh;
+        max-height: 95vh;
     }
 
     #content>#markdown {
@@ -79,6 +81,8 @@ article>div>h3 {
     }
 
     #content-right {
+        top: 10vh;
+        max-height: 85vh;
         padding: 12px;
     }
 

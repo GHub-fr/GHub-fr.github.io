@@ -9,6 +9,8 @@ header {
 
 header>#navlinklist{
     width: 100%;
+    min-height: 10vh;
+    max-height: 10vh;
     
     background: linear-gradient(var(--main-color-transparent), var(--background-color-transparent));
     backdrop-filter: var(--blur);

@@ -19,6 +19,11 @@
     padding-top: 10px;
 }
 
+#anchor>*{
+    max-width: 50px;
+    min-width: 50px;
+}
+
 #anchor>a>button,
 #editAnchor>button,
 #editAnchor>a>button,

@@ -39,15 +39,15 @@
     border-color: var(--main-color);
     border-radius: 16px;
 
+    border-top-style: none;
+
     background: linear-gradient(var(--main-color-transparent), var(--background-color-transparent));
 
     position: sticky;
 
-    max-height: 75vh;
     min-height: 10vh;
     min-width: 20vw;
-    top: 15vh;
-    bottom: 0vh;
+    max-width: 25vw;
 
     backdrop-filter: blur(10px);
     
@@ -83,6 +83,8 @@
     #anchorList{
         padding-right: 50px;
         display: none;
+        top: 0vh;
+        max-height: 95vh;
     }
 
     #anchorList>a {
@@ -98,6 +100,8 @@
 
 @media screen and (min-width: 1024px) {
     #anchorList {
+        top: 10vh;
+        max-height: 85vh;
         display: grid;
     }
 }
