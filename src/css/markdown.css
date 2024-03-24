@@ -39,10 +39,6 @@
     border-color: var(--main-color);
     border-radius: 16px;
 
-    border-top-style: none;
-
-    background: linear-gradient(var(--main-color-transparent), var(--background-color-transparent));
-
     position: sticky;
 
     min-height: 10vh;

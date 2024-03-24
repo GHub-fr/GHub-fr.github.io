@@ -21,8 +21,6 @@
     border-color: var(--main-color);
     border-radius: 16px;
 
-    border-top-style: none;
-
     margin-bottom: 2.5vh;
     padding: 1vh;
 }
