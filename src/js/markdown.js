@@ -134,8 +134,8 @@ function anchorButton(repo, file, gist) {
     divEdit.appendChild(link);
 }
 
-function setAnchorButton() { 
-    var content = document.querySelector("#anchor");
+function setAnchorButton(id, asset) { 
+    var content = document.querySelector(id);
 
     var button = document.createElement("button");
     button.id = "SummaryAnchor";
@@ -153,14 +153,14 @@ function setAnchorButton() {
     }
 
     image.classList = "svg";
-    image.src = "/assets/svg/book.svg";
+    image.src = asset;
 
     button.appendChild(image);
     content.appendChild(button);
 }
 
 function setAnchor() {
-    setAnchorButton();
+    setAnchorButton("#anchor", "/assets/svg/book.svg");
     var anchorList = document.createElement("div");
     anchorList.id = "anchorList";
     var contentLeft = document.getElementById("content-left");
@@ -214,7 +214,7 @@ function setAnchor() {
         }
     };
     var textCheck = document.createElement("p");
-    textCheck.textContent = "3+";
+    textCheck.textContent = "# Titre 3+";
     textCheck.style = "padding:10px;";
     var span = document.createElement("span");
 
@@ -251,7 +251,7 @@ function setAnchor() {
         }
     };
     var textCheck2 = document.createElement("p");
-    textCheck2.textContent = "#2";
+    textCheck2.textContent = "Titre #2";
     textCheck2.style = "padding:10px;";
     var span2 = document.createElement("span");
 
@@ -272,6 +272,7 @@ function setAnchor() {
 
     anchorList.appendChild(divAnchorTitle);
     anchorList.appendChild(AnchorSummary);
+    setAnchorButton("#AnchorSummary", "/assets/svg/close.svg");
 
 
     var childDivs = document.getElementById('markdown').querySelectorAll("h1, h2, h3, h4, h5, h6");

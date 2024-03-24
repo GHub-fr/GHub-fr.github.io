@@ -41,9 +41,6 @@
 
     position: sticky;
 
-    min-height: 10vh;
-    min-width: 20vw;
-    max-width: 25vw;
 
     backdrop-filter: blur(10px);
     
@@ -63,6 +60,24 @@
     align-items: center;
 }
 
+#anchorList>#AnchorSummary{
+    display: contents;
+}
+
+#anchorList>#AnchorSummary>button {
+    margin-bottom: 15px;
+    border-radius: 16px;
+}
+
+#anchorList>#AnchorSummary>button>.svg {
+    max-height: 35px;
+    min-width: 100%;
+}
+
+#anchorList>#AnchorSummary>.check>.checkbox {
+    min-width: 100%;
+}
+
 #anchorList:hover,
 #anchorList:active
 {
@@ -77,7 +92,7 @@
 
 @media screen and (max-width: 1024px) {
     #anchorList{
-        padding-right: 50px;
+        padding-right: 25px;
         display: none;
         top: 0vh;
         max-height: 95vh;
@@ -96,8 +111,8 @@
 
 @media screen and (min-width: 1024px) {
     #anchorList {
-        top: 10vh;
-        max-height: 85vh;
+        top: 15vh;
+        max-height: 80vh;
         display: grid;
     }
 }
