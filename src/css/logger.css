@@ -1,9 +1,9 @@
-div>h1,
-div>p {
+#logger>h1,
+#logger>p {
     display: inline-block;
 }
 
-div>p {
+#logger>p {
     padding-left: 16px;
 }
 
@@ -13,4 +13,4 @@ div>p {
 
 #logger>#ip>div>.note {
     color: var(--link-color);
-}
+} 
