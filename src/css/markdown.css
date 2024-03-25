@@ -94,7 +94,7 @@
     #anchorList{
         padding-right: 25px;
         display: none;
-
+        max-height: 95vh;
         top: 0vh;
     }
 
