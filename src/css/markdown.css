@@ -92,15 +92,10 @@
 
 @media screen and (max-width: 1024px) {
     #anchorList{
-        position: absolute;
-
         padding-right: 25px;
         display: none;
 
         top: 0vh;
-        left: 0;
-        right: 0;
-        bottom: 0;
     }
 
     #anchorList>a {
@@ -116,7 +111,6 @@
 
 @media screen and (min-width: 1024px) {
     #anchorList {
-        position: relative;
         top: 15vh;
         max-height: 80vh;
         display: grid;
